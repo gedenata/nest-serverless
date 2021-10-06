@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "nest-serverless",
+    "develop": "nest-serverless"
+  },
+  "targets": {}
+}
