@@ -1,5 +1,5 @@
 import { Injectable, LoggerService, Scope } from '@nestjs/common';
-import { join } from 'path/posix';
+import { join } from 'path';
 import { Logger } from 'winston';
 import * as winston from 'winston';
 import * as DailyRotateFile from 'winston-daily-rotate-file';
