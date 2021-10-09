@@ -5,6 +5,7 @@
         "Nata",
         "nestjs",
         "prebuild",
+        "topbar",
         "typeorm"
     ]
 }
