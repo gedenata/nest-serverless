@@ -4,6 +4,7 @@
         "Logform",
         "Nata",
         "nestjs",
+        "ormconfig",
         "prebuild",
         "topbar",
         "typeorm"
