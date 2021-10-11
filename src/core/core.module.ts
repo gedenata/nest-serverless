@@ -1,7 +1,6 @@
 import { Global, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { HttpModule } from '@nestjs/axios';
-import { CoreController } from './core.controller';
 import * as ormConfig from 'ormconfig';
 import * as https from 'https';
 
@@ -18,6 +17,5 @@ import * as https from 'https';
       }),
     }),
   ],
-  controllers: [CoreController],
 })
 export class CoreModule {}
