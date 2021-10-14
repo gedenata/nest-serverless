@@ -1,17 +1,17 @@
 version: '3.9'
 services:
   mariadb:
-    container_name: mariadb10
+    container_name: mysql-mariadb
     image: mariadb:10.1.10
     ports:
-      - '3333:3333'
+      - '3303:3303'
     environment:
       MYSQL_ROOT_HOST: localhost
       MYSQL_DATABASE: serverless
-      MYSQL_ROOT_PASSWORD: Password123#
+      MYSQL_ROOT_PASSWORD: password123
     restart: always
   mssql:
-    container_name: azure-sql-edge
+    container_name: mssql-azure
     image: mcr.microsoft.com/azure-sql-edge
     ports:
       - '1444:1444'

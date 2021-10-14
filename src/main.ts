@@ -7,6 +7,9 @@ import { AppLogger } from './core/modules/logger/logger.service';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
   app.useLogger(new AppLogger());
+  app.enableCors();
+  app.enableVersioning();
+  app.setGlobalPrefix('api');
 
   const swaggerConfig = new DocumentBuilder()
     .setTitle('Nest Serverless API')
