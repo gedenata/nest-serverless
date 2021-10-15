@@ -4,11 +4,13 @@ services:
     container_name: mysql-mariadb
     image: mariadb:10.1.10
     ports:
-      - '3303:3303'
+      - '3306:3306'
     environment:
-      MYSQL_ROOT_HOST: localhost
+      MYSQL_USER: nest
       MYSQL_DATABASE: serverless
-      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_PASSWORD: nest_serverless
+      MYSQL_ROOT_HOST: localhost
+      MYSQL_ROOT_PASSWORD: nest_serverless
     restart: always
   mssql:
     container_name: mssql-azure
@@ -17,6 +19,6 @@ services:
       - '1444:1444'
     environment:
       ACCEPT_EULA: Y
-      MSSQL_SA_PASSWORD: Password123#
+      MSSQL_SA_PASSWORD: Azure1444
       MSSQL_PID: Developer
     restart: always
