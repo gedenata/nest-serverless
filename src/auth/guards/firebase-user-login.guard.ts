@@ -1,9 +1,5 @@
-import { CanActivate, Injectable } from '@nestjs/common';
-import { Observable } from 'rxjs';
+import { Injectable } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 
 @Injectable()
-export class FirebaseUserLoginGuard implements CanActivate {
-  canActivate(): boolean | Promise<boolean> | Observable<boolean> {
-    return true;
-  }
-}
+export class FirebaseUserLoginGuard extends AuthGuard('firebase-user-login') {}
