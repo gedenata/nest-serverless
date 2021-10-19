@@ -10,7 +10,7 @@ export class FirebaseService {
       'FIREBASE_STORAGE_BUCKET',
     );
 
-    if (firebaseAdmin.app.length) {
+    if (!firebaseAdmin.app.length) {
       firebaseAdmin.initializeApp({
         credential: firebaseAdmin.credential.cert(
           this.configService.get('firebase'),
